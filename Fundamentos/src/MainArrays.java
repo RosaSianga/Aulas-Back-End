@@ -113,5 +113,17 @@ public class MainArrays {
         }
 
         System.out.println("O maior número é: " + numMaior);
+
+        // Vetor fixo
+        //String[] nome = { "Rosa", "Ericles", "Daniel" };
+
+        // Scanner
+        //Scanner sc = new Scanner(System.in);
+
+        //sc.nextLine();
+        // Ler registro digitado.
+
+        //sc.close();
+        // Boas práticas finalizar o scanner
     }
 }
