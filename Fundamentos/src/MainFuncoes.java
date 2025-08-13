@@ -19,48 +19,66 @@ public class MainFuncoes {
         //saudar("Rosa");
         //subtrair(5,2);
 
-        int resultado = somar(5,15);
-        System.out.println(resultado);
+//        int resultado = somar(5,15);
+//        System.out.println(resultado);
 
 //  1. Exibir uma mensagem de boas-vindas**
-        mostrarMensagem();
+        //mostrarMensagem();
 
 
 //  2. Mostrar o dobro de um número
-        int numinteiro;
-        System.out.println("Digite um número:");
-        numinteiro = sc.nextInt();
-        mostrarDobro(numinteiro);
+//        int numinteiro;
+//        System.out.println("Digite um número:");
+//        numinteiro = sc.nextInt();
+        //mostrarDobro(numinteiro);
 
 //  3. Retornar a divisão de dois números inteiros
 
-        System.out.println("Digite 2 numeros para a divisão");
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
+//        System.out.println("Digite 2 numeros para a divisão");
+//        int num1 = sc.nextInt();
+//        int num2 = sc.nextInt();
 
-        int resultadoDivisao = dividirNumero(num1,num2);
-        System.out.println("O valor da divisão é : " + resultadoDivisao);
+        //int resultadoDivisao = dividirNumero(num1,num2);
+        //System.out.println("O valor da divisão é : " + resultadoDivisao);
 
 //  4. Verificar se um número é par
 
-        System.out.println("Digite um número para identificar se é par ou ímpar");
-        int numero = sc.nextInt();
+//        System.out.println("Digite um número para identificar se é par ou ímpar");
+//        int numero = sc.nextInt();
 
-        boolean verdade = ehpar(numero);
+        //boolean verdade = ehpar(numero);
 
-        System.out.println("O número é par ? " + verdade);
+        //System.out.println("O número é par ? " + verdade);
 
 //  5. Calcular média de três notas
-        System.out.println("Digite 3 notas para saber a média");
-        int nota1 = sc.nextInt();
-        int nota2 = sc.nextInt();
-        int nota3 = sc.nextInt();
+//        System.out.println("Digite 3 notas para saber a média");
+//        int nota1 = sc.nextInt();
+//        int nota2 = sc.nextInt();
+//        int nota3 = sc.nextInt();
 
-        double mediaNota = calcularMedia(nota1, nota2, nota3);
+        //double mediaNota = calcularMedia(nota1, nota2, nota3);
 
-        System.out.println("A média é : " + mediaNota);
+        //System.out.println("A média é : " + mediaNota);
 
+//  6. Mostrar uma linha decorativa
 
+        //linha();
+
+//Extra 1 - Converter Celsius para Fahrenheit
+        celsiusParaFahrenheit(30);
+
+//  Extra 1 - Verificar se um número é múltiplo de 3
+//        System.out.println("Digite um número inteiro: ");
+//        int numero = sc.nextInt();
+//        boolean multiplo = ehMultiploDeTres(numero);
+//
+//        System.out.println("O número " + numero + "é multiplo de 3 ? " + multiplo);
+
+//Extra 2 - Somar elementos de um array
+
+//        int[] meuArray = {1,2,3,4,5,6,7,8,9,10};
+//        int soma = somarArray(meuArray); // 10
+//        System.out.println("A soma do Array é : " + soma);
 
     }
 
@@ -76,7 +94,7 @@ public class MainFuncoes {
     }
 
     // Função sem retorno com vários Parâmetros
-    public static void subtrair (int num1, int num2){
+    public static void subtrair(int num1, int num2) {
         int resultado = num1 - num2;
         System.out.println(resultado);
     }
@@ -101,7 +119,7 @@ public class MainFuncoes {
 //      mostrarMensagem(); // Saída: Bem-vindo(a) ao programa!
 
 
-    public static void mostrarMensagem(){
+    public static void mostrarMensagem() {
         System.out.println("Bem-vindo(a) ao Programa! ");
     }
 
@@ -113,7 +131,7 @@ public class MainFuncoes {
 //     Exemplo de uso:
 //            mostrarDobro(5); // Saída: O dobro é 10
 
-    public static void mostrarDobro(int numInteiro){
+    public static void mostrarDobro(int numInteiro) {
         int resultado = numInteiro * 2;
         System.out.println(resultado);
     }
@@ -129,12 +147,29 @@ public class MainFuncoes {
 //          int resultado = somar(4, 7); // resultado = 11
 
 
-    public static int dividirNumero(int num1, int num2){
+    public static int dividirNumero(int num1, int num2) {
 
         int divisao = 0;
         divisao = num1 / num2;
 
         return divisao;
+    }
+
+//Extra 1 - Converter Celsius para Fahrenheit
+//    Crie a função celsiusParaFahrenheit que receba uma temperatura em Celsius e exiba no
+//    console o valor convertido para Fahrenheit.
+//            Fórmula: F = C * 1,8 + 32
+//    Parâmetro: decimal (double ou float)
+//    Retorno: nenhum (void)
+//    Exemplo:
+//      celsiusParaFahrenheit(0);   // Saída: 32.0°F
+//      celsiusParaFahrenheit(25);  // Saída: 77.0°F
+
+    public static void celsiusParaFahrenheit(double celsius){
+        double temperatura = celsius * 1.8 + 32;
+
+        System.out.println("Temperatura celsius " + celsius + " é igual a " + temperatura + " Fahrenheit");
+
     }
 
 // Intermediários
@@ -145,7 +180,7 @@ public class MainFuncoes {
 //     Exemplo de uso:
 //          boolean resultado = ehPar(8); // true
 
-    public static boolean ehpar (int num){
+    public static boolean ehpar(int num) {
         int resultado = num % 2;
         boolean verdade = false;
 
@@ -163,7 +198,7 @@ public class MainFuncoes {
 //     Exemplo de uso:
 //          double media = calcularMedia(7.5, 8.0, 9.0); // 8.1666...
 
-    public static double calcularMedia(int nota1, int nota2, int nota3){
+    public static double calcularMedia(int nota1, int nota2, int nota3) {
         double media = (double) (nota1 + nota2 + nota3) / 3;
 
         return media;
@@ -178,5 +213,65 @@ public class MainFuncoes {
 //     Exemplo de uso:
 //        linha(); // Saída: ------------------------------
 
+    public static void linha() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite um simbolo");
+        String simbolo = "";
+        String simboloDigitado = sc.nextLine();
+
+        for (int i = 0; i <= 30; i++) {
+            simbolo = simbolo + simboloDigitado;
+        }
+
+        System.out.println(simbolo);
+
+        //ou
+
+//        for (int i = 0; i <= 30; i++) {
+//            simbolo = simboloDigitado;
+//            System.out.print(simbolo);
+//        }
+
+    }
+
+//  Extra 1 - Verificar se um número é múltiplo de 3
+//        Crie a função ehMultiploDeTres que receba um número inteiro e retorne true se for múltiplo de 3,
+//        ou false caso contrário.
+//        Exemplo:
+//            boolean resultado = ehMultiploDeTres(9); // true
+//            boolean outro = ehMultiploDeTres(10);    // false
+
+
+    public static boolean ehMultiploDeTres(int numero) {
+
+        int resto = numero % 3;
+        boolean multiplo = false;
+
+        if (resto == 0) {
+            multiplo = true;
+        }
+
+        return multiplo;
+
+    }
+
+//Extra 2 - Somar elementos de um array
+//    Crie a função somarArray que receba um array de números inteiros e retorne a soma de todos os elementos.
+//            Parâmetro: int[]
+//    Retorno: inteiro
+//    Exemplo:
+//          int[] meuArray = {1， 2， 3， 4}；
+//          int soma = somarArray(meuArray); // 10
+
+    public static int somarArray(int[] numero){
+        int soma = 0;
+
+        for (int i = 0; i < numero.length; i++) {
+            soma = soma + numero[i];
+        }
+        return soma;
+    }
 
 }
